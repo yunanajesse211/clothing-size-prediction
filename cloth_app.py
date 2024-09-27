@@ -15,6 +15,13 @@ def predict_size(input_data):
     return predicted_size
 
 #Main App
+html_file="""
+<div style="background-color:tomato; padding:10px">
+<h2 style="color:white; text-align:center;">Cloth size predictor</h2>
+</div>
+"""
+
+st.markdown(html_file, unsafe_allow_html=True)
 st.title("Clothing Size Prediction")
 weight = st.number_input('Weight (in kg)', min_value=20.0, max_value=500.0, step=1.0)
 age = st.number_input('Age', min_value=10, max_value=120, step=1)
