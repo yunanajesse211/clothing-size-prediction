@@ -1,11 +1,10 @@
 import streamlit as st
-import numpy as np
-import pickle
 from sklearn.preprocessing import LabelEncoder
+import pickle
+import gzip
 
-
-#Load model
-model = pickle.load(open('model.pkl', 'rb'))
+with gzip.open('model.pkl.gz', 'rb') as f:
+    model = pickle.load(f)
 
 def predict_size(input_data):
     size_labels = ['L', 'M', 'S', 'XL', 'XXL', 'XXS', 'XXXL']
