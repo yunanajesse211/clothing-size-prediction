@@ -20,7 +20,7 @@ html_file="""
 <h2 style="color:white; text-align:center;">Cloth size predictor</h2>
 </div>
 """
-
+st.set_page_config(page_title='Cloth size predictor', page_icon=':chart')
 st.markdown(html_file, unsafe_allow_html=True)
 st.title("Clothing Size Prediction")
 weight = st.number_input('Weight (in kg)', min_value=20.0, max_value=500.0, step=1.0)
